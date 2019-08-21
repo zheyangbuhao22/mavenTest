@@ -25,6 +25,7 @@ public class TestController {
 
     @RequestMapping("/find")
     public ModelAndView findAll(ModelAndView mv){
+        System.out.println("findAll进来了……");
         List<Items> list = testService.findAll();
         System.out.println(list);
         mv.addObject("list",list);
